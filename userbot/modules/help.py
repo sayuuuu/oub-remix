@@ -21,13 +21,13 @@ async def help(event):
         else:
             await event.edit("**Module doesn't exist or Module name is invalid**")
     else:
-        await event.edit(f"**All modules are listed below**\
+        await event.edit(f"** Modules-: **\
             \nUsage: Type `.help <module name>` to know how it works\
             \nModules loaded: {len(modules)}")
         string = ""
         for i in sorted(CMD_HELP):
             string += "`" + str(i)
-            string += "`  -  "
+            string += "`  •  "
         modules_list = await event.reply(string)
         await asyncio.sleep(300)
         await modules_list.delete()
