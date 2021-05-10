@@ -84,6 +84,7 @@ glitch_this
 twitter_scraper
 pyaztro
 jikanpy
+nekos.py
 vcsi
 lottie
 wand
