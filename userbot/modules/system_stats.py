@@ -217,20 +217,14 @@ async def pipcheck(pip):
         else:
             await pip.edit("`Use .help system to see an example`")
 
-@register(outgoing=True, pattern="^.start$")
+@register(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
-    """ For .start command, check if the bot is running.  """
+    """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
     uptime = await get_readable_time((time.time() - StartTime))
-    output = (f"`🤖 STATUS: Remix is running ✅`\n"
-             f"`Telethon version`: {version.__version__} \n"
-             f"`Python version🐍`: {python_version()} \n"
-             f"`Bot Version🤘: Remix {BOT_VER}` \n"
-             f"==================================== \n"
-             f"`User 👨‍🚀`: {DEFAULTUSER} \n"
-             f"`Maintainer 🏄‍♂️`: @heyworld \n"
+    output = (f"`User 👨‍🚀`: {DEFAULTUSER} \n"
              f"`Bot Uptime ⏱️`: {uptime} \n"
-             f"====================================\n")
+             f"==========================\n")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -274,7 +268,7 @@ CMD_HELP.update({
 \nUsage: Shows the userbot version.\
 \n\n`.pip` <module(s)>\
 \nUsage: Does a search of pip modules(s).\
-\n\n`.start`\
+\n\n`.alive`\
 \nUsage: Type .start to see whether your bot is working or not.\
 \n\n`.aliveu` <text>\
 \nUsage: Changes the 'user' in alive to the text you want.\
