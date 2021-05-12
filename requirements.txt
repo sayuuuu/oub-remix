@@ -75,6 +75,7 @@ pytube>=9.5.1
 pymongo[srv]
 youtube_search
 justwatch
+nekos.py
 deezloader
 zipfile38
 bitlyshortener
@@ -84,7 +85,6 @@ glitch_this
 twitter_scraper
 pyaztro
 jikanpy
-nekos.py
 vcsi
 lottie
 wand
